@@ -77,7 +77,7 @@ export const info = {
     bio: "Hello, I'm Joseph, Your next Software Engineer. I am a Full-Stack Engineer with a passion for growth, development, and innovation. I am currently accepting project opportunities, clients, or employment.",
     skills:
         {
-            proficientWith: ['javascript', 'react', 'git', 'github', 'bootstrap','tailwind','nodejs','expressjs','mongodb', 'html', 'css', 'figma','OOP','restapi','scrum','agile','functionalprogramming'],
+            proficientWith: ['javascript', 'react', 'git', 'github', 'bootstrap','tailwind','nodejs','expressjs','mongodb', 'html', 'css', 'figma','OOP','restapi','scrum','agile','linux'],
             exposedTo: ['typescript', 'python', 'Nextjs','AWS','PostgresSql']
         }
     ,

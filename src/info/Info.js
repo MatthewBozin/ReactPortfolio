@@ -103,13 +103,13 @@ export const info = {
     ],
     portfolio: [ // This is where your portfolio projects will be detailed
         {
-            title: "Movement Culture Dance",
-            live: "http://www.movementculturedance.com/", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
+            title: "Image Generalization Finder",
+            live: "https://github.com/JoeSangine/image-generalization-finder", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
             image: mock1
         },
         {
-            title: "Suzanne's Strings",
-            live: "https://suzannesstrings.netlify.app/",
+            title: "Together",
+            live: "https://github.com/Caleb-Cohen/Together",
             image: mock2
         },
         {
@@ -118,13 +118,13 @@ export const info = {
             image: mock3
         },
         {
-            title: "Word Maestro",
-            live: "https://wordmaestro.netlify.app/#",
+            title: "Movement Culture Dance",
+            live: "http://www.movementculturedance.com/",
             image: mock4
         },
         {
-            title: "Digital Business Card Generator",
-            live: "https://github.com/TheWoodenMan/digital-business-card-app",
+            title: "Suzanne's Strings",
+            live: "https://suzannesstrings.netlify.app/",
             image: mock5
         }
     ]

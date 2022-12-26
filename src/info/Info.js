@@ -110,7 +110,10 @@ export const info = {
         {
             title: "Together",
             live: "https://github.com/Caleb-Cohen/Together",
-            image: mock2
+            image: mock2,
+            imgStyle: {
+                maxHeight: '63vh'
+            }
         },
         {
             title: "Oasis Marketing Inc.",
@@ -123,8 +126,8 @@ export const info = {
             image: mock4
         },
         {
-            title: "Suzanne's Strings",
-            live: "https://suzannesstrings.netlify.app/",
+            title: "Digital Buisness Card Generator",
+            live: "https://github.com/TheWoodenMan/digital-business-card-app",
             image: mock5
         }
     ]

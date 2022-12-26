@@ -128,7 +128,10 @@ export const info = {
         {
             title: "Digital Buisness Card Generator",
             live: "https://github.com/TheWoodenMan/digital-business-card-app",
-            image: mock5
+            image: mock5,
+            imgStyle: {
+                aspectRatio: 'none',
+            }
         }
     ]
 }

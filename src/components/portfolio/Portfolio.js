@@ -8,7 +8,7 @@ export default function Portfolio({ darkMode }) {
         <Box>
             <Grid container display={'flex'} justifyContent={'center'}>
                 {info.portfolio.map((project, index) => (
-                   <Grid item xs={12} md={6} key={index} display={'flex'}>
+                   <Grid item xs={12} md={6} key={index} display={'flex'} justifyContent={'center'}>
                        <PortfolioBlock darkMode={darkMode} image={project.image} live={project.live} source={project.source} title={project.title} imgStyle={project.imgStyle || {}} />
                    </Grid>
                 ))}

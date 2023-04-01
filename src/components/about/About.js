@@ -11,8 +11,7 @@ export default function About() {
 
   const iconClass = "fa fa-circle";
 
-  const text =
-    "Hello, I'm Matthew, Your next Software Engineer. I am a Full-Stack Engineer with a passion for growth, development, and innovation. I am currently accepting project opportunities, clients, or employment.";
+  const text = info.bio;
 
   const [typedText, setTypedText] = useState("");
   const [index, setIndex] = useState(0);

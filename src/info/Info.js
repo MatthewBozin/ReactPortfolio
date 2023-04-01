@@ -65,7 +65,7 @@ export const info = {
       label: "twitter",
     },
   ],
-  bio: "Hello, I'm Matthew, Your next Software Engineer. I am a Full-Stack Engineer with a passion for growth, development, and innovation. I am currently accepting project opportunities, clients, or employment.",
+  bio: "Hello, I'm Matthew, Your next Software Engineer. I have a passion for growth, development, and innovation, and I enjoy pair programming, learning new technologies, and solving complex technical problems. I am currently accepting project opportunities, clients, or employment.",
   skills: {
     core: [
       "javascript",

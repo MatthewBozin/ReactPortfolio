@@ -33,8 +33,8 @@ export default function Home() {
   };
 
   const transformStyle = {
-    transform: `rotateX(${rotateValues.x * 5}deg) rotateY(${
-      rotateValues.y * 5
+    transform: `rotateX(${rotateValues.x * 8}deg) rotateY(${
+      rotateValues.y * 8
     }deg)`,
     transition: "transform 0.2s ease-out",
   };
@@ -68,8 +68,8 @@ export default function Home() {
         mr={{ xs: 0, md: "2rem" }}
         ref={imageRef}
       />
-      <Box style={containerStyle}>
-        <h1 style={transformStyle}>
+      <Box>
+        <h1>
           Hi, I'm{" "}
           <span
             style={{

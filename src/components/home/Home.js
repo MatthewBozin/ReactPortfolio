@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Style from "./Home.module.scss";
 import me from "../../img/self.png";
 import classNames from "classnames";
@@ -10,14 +10,36 @@ import { info } from "../../info/Info";
 export default function Home() {
   const [rotateValues, setRotateValues] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    const { left, top, width, height } = e.target.getBoundingClientRect();
-    const x = -(clientY - top - height / 2) / (height / 2);
-    const y = (clientX - left - width / 2) / (width / 2);
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const { left, top, width, height } = e.target.getBoundingClientRect();
+      const x = -(clientY - top - height / 2) / (height / 2);
+      const y = (clientX - left - width / 2) / (width / 2);
 
-    setRotateValues({ x, y });
+      setRotateValues({ x, y });
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const containerStyle = {
+    perspective: "1000px",
+    transformStyle: "preserve-3d",
   };
+
+  const transformStyle = {
+    transform: `rotateX(${rotateValues.x * 5}deg) rotateY(${
+      rotateValues.y * 5
+    }deg)`,
+    transition: "transform 0.2s ease-out",
+  };
+
+  const imageRef = React.createRef();
 
   return (
     <Box
@@ -27,20 +49,14 @@ export default function Home() {
       alignItems={"center"}
       justifyContent={"center"}
       minHeight={"calc(100vh - 175px)"}
-      style={{
-        perspective: "1000px",
-        transformStyle: "preserve-3d",
-      }}
+      style={containerStyle}
     >
       <Box
         className={classNames(Style.avatar, Style.shadowed)}
         alt={"image of developer"}
         style={{
           background: info.gradient,
-          transform: `rotateX(${rotateValues.x * 10}deg) rotateY(${
-            rotateValues.y * 10
-          }deg)`,
-          transition: "transform 0.2s ease-out",
+          ...transformStyle,
         }}
         component={"img"}
         src={me}
@@ -50,10 +66,10 @@ export default function Home() {
         p={"0.75rem"}
         mb={{ xs: "1rem", sm: 0 }}
         mr={{ xs: 0, md: "2rem" }}
-        onMouseMove={handleMouseMove}
+        ref={imageRef}
       />
-      <Box>
-        <h1>
+      <Box style={containerStyle}>
+        <h1 style={transformStyle}>
           Hi, I'm{" "}
           <span
             style={{

@@ -128,9 +128,6 @@ export const info = {
       title: "SRDcat",
       live: "https://srdcat.app/",
       image: mock3,
-      imgStyle: {
-        minHeight: "63vh",
-      },
     },
     {
       title: "Caesura",
@@ -141,17 +138,11 @@ export const info = {
       title: "ARCdoom",
       live: "https://discord.com/oauth2/authorize?client_id=897339844160815124&permissions=0&scope=bot%20applications.commands",
       image: mock5,
-      imgStyle: {
-        minHeight: "63vh",
-      },
     },
     {
       title: "UVGDRS",
       live: "https://www.wizardthieffighter.com/tools/uvg-digital-referee-screen.html",
       image: mock6,
-      imgStyle: {
-        minHeight: "63vh",
-      },
     },
   ],
 };

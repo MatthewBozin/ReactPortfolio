@@ -14,6 +14,10 @@ footer {
     transition: color 400ms;
   }
 
+  i:hover {
+    color: $purple;
+  }
+
   a:visited {
     color: $white;
   }

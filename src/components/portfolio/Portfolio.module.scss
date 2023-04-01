@@ -1,0 +1,9 @@
+@import "../../variables.modules";
+
+.hoverContainer {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hoverContainer:hover {
+  transform: scale(1.02);
+}

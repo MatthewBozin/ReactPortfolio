@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Style from "./Home.module.scss";
 import me from "../../img/self.png";
 import classNames from "classnames";
@@ -8,6 +8,39 @@ import { Box } from "@mui/material";
 import { info } from "../../info/Info";
 
 export default function Home() {
+  const [rotateValues, setRotateValues] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const { left, top, width, height } = e.target.getBoundingClientRect();
+      const x = -(clientY - top - height / 2) / (height / 2);
+      const y = (clientX - left - width / 2) / (width / 2);
+
+      setRotateValues({ x, y });
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const containerStyle = {
+    perspective: "1000px",
+    transformStyle: "preserve-3d",
+  };
+
+  const transformStyle = {
+    transform: `rotateX(${rotateValues.x * 8}deg) rotateY(${
+      rotateValues.y * 8
+    }deg)`,
+    transition: "transform 0.2s ease-out",
+  };
+
+  const imageRef = React.createRef();
+
   return (
     <Box
       component={"main"}
@@ -16,11 +49,15 @@ export default function Home() {
       alignItems={"center"}
       justifyContent={"center"}
       minHeight={"calc(100vh - 175px)"}
+      style={containerStyle}
     >
       <Box
         className={classNames(Style.avatar, Style.shadowed)}
         alt={"image of developer"}
-        style={{ background: info.gradient }}
+        style={{
+          background: info.gradient,
+          ...transformStyle,
+        }}
         component={"img"}
         src={me}
         width={{ xs: "35vh", md: "40vh" }}
@@ -29,6 +66,7 @@ export default function Home() {
         p={"0.75rem"}
         mb={{ xs: "1rem", sm: 0 }}
         mr={{ xs: 0, md: "2rem" }}
+        ref={imageRef}
       />
       <Box>
         <h1>

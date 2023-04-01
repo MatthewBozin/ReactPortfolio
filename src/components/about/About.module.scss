@@ -8,10 +8,15 @@
   color: $green;
 }
 
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
 .skills {
   columns: 1;
   @media only screen and (min-width: 940px) {
-    columns: 2;
+    columns: 3;
   }
 
   li {

@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 
 export default function BaseLayout() {
-  let [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   function handleClick() {
     setDarkMode(!darkMode);

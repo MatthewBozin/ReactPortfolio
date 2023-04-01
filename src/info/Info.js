@@ -25,13 +25,12 @@ of what each of the values mean.
 export const info = {
   firstName: "Matthew",
   lastName: "Bozin",
-  initials: "🖥️", // the example uses first and last, but feel free to use three or more if you like.
-  position: "a Full Stack Developer",
-  selfPortrait: self, // don't change this unless you want to name your self-portrait in the "img" folder something else!
-  gradient: `-webkit-linear-gradient(135deg, ${colors})`, // don't change this either
+  initials: "🖥️",
+  position: "a Full Stack Software Engineer",
+  selfPortrait: self,
+  gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: colors[0],
   miniBio: [
-    // these are just some "tidbits" about yourself. You can look at mine https://paytonjewell.github.io/#/ for an example if you'd like
     {
       emoji: "☕",
       text: "fueled by coffee",
@@ -65,93 +64,102 @@ export const info = {
       icon: "fa fa-twitter",
       label: "twitter",
     },
-    // Feel free to remove any of these that you don't have. I'll write an FAQ on how to add new ones later, let me know if you have a request for an icon!
-    // Just change the links so that they lead to your social profiles.
   ],
-  bio: "Hello, I'm Matthew, Your next Software Engineer. I am a Full-Stack Engineer with a passion for growth, development, and innovation. I am currently accepting project opportunities, clients, or employment.",
+  bio: "Hello, I'm Matthew, Your next Software Engineer. I have a passion for growth, development, and innovation, and I enjoy pair programming, learning new technologies, and solving complex technical problems. I am currently accepting project opportunities, clients, or employment.",
   skills: {
-    proficientWith: [
-      "react",
+    core: [
+      "javascript",
       "typescript",
-      "git",
-      "github",
-      "bootstrap",
-      "tailwind",
-      "mongodb",
-      "expressjs",
-      "html",
-      "nodejs",
-      "AWS",
-      "css",
-      "figma",
+      "python",
       "OOP",
-      "REST API",
       "scrum",
       "agile",
-      "linux",
+      "testing",
+      "open source",
     ],
-    exposedTo: ["python", "Nextjs", "PostgresSql"],
+    frontend: [
+      "react",
+      "Nextjs",
+      "bootstrap",
+      "tailwind",
+      "html",
+      "css",
+      "figma",
+      "materialUI",
+    ],
+    backend: [
+      "nodejs",
+      "expressjs",
+      "mongodb",
+      "REST API",
+      "SQL",
+      "PostgresSql",
+    ],
+    cloud: ["AWS", "IVS", "Geolocation", "Cognito", "GCP"],
+    devops: ["git", "github", "GHA", "linux", "CI/CD", "docker"],
   },
   hobbies: [
     {
       label: "reading",
       emoji: "📚",
+      favorites: ["Dune", "The Witcher"],
     },
     {
       label: "video games",
       emoji: "🎮",
+      favorites: ["Dark Souls", "Bloodborne"],
     },
     {
       label: "board games",
       emoji: "🎲",
+      favorites: ["DnD", "Infinity", "Catan"],
+    },
+    {
+      label: "movies",
+      emoji: "🎥",
+      favorites: ["Fury Road", "Nope", "The Thing", "Get Out"],
     },
     {
       label: "travel",
       emoji: "🌐",
     },
-    // Same as above, change the emojis to match / relate to your hobbies or interests.
-    // You can also remove the emojis if you'd like, I just think they look cute :P
   ],
   portfolio: [
-    // This is where your portfolio projects will be detailed
     {
       title: "Food Oasis",
-      live: "https://foodoasis.la/", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
+      live: "https://foodoasis.la/",
+      source: "https://github.com/hackforla/food-oasis",
       image: mock1,
     },
     {
       title: "Together",
       live: "https://together.cyclic.app/",
+      source: "https://github.com/Together-100Devs/Together",
       image: mock2,
     },
     {
       title: "SRDcat",
       live: "https://srdcat.app/",
+      source: "https://github.com/MatthewBozin/SRDCAT",
       image: mock3,
-      imgStyle: {
-        minHeight: "63vh",
-      },
     },
     {
       title: "Caesura",
       live: "https://caesura.cyclic.app/",
+      source: "https://github.com/MatthewBozin/Caesura",
       image: mock4,
     },
     {
       title: "ARCdoom",
       live: "https://discord.com/oauth2/authorize?client_id=897339844160815124&permissions=0&scope=bot%20applications.commands",
+      source: "https://github.com/MatthewBozin/ARC-Bot",
       image: mock5,
-      imgStyle: {
-        minHeight: "63vh",
-      },
     },
     {
       title: "UVGDRS",
       live: "https://www.wizardthieffighter.com/tools/uvg-digital-referee-screen.html",
+      source: "https://github.com/MatthewBozin/UVGScreen",
       image: mock6,
-      imgStyle: {
-        minHeight: "63vh",
-      },
     },
   ],
 };

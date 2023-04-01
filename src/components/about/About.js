@@ -26,25 +26,7 @@ export default function About() {
     return () => clearInterval(interval);
   }, [text, index]);
 
-  function aboutMeText() {
-    return (
-      <>
-        <p>
-          <span style={{ color: info.baseColor }}>
-            {firstName}
-            {info.lastName.toLowerCase()} $
-          </span>{" "}
-          cat about{firstName}{" "}
-        </p>
-        <p>
-          <span style={{ color: info.baseColor }}>
-            about{firstName} <span className={Style.green}>(main)</span> ${" "}
-          </span>
-          {info.bio}
-        </p>
-      </>
-    );
-  }
+  const categories = ["core", "frontend", "backend", "cloud", "devops"];
 
   function skillsText() {
     return (
@@ -62,18 +44,16 @@ export default function About() {
           </span>{" "}
           ls
         </p>
-        <p style={{ color: info.baseColor }}> Proficient With</p>
-        <ul className={Style.skills}>
-          {info.skills.proficientWith.map((proficiency, index) => (
-            <li key={index}>{proficiency}</li>
-          ))}
-        </ul>
-        <p style={{ color: info.baseColor }}> Exposed To</p>
-        <ul className={Style.skills}>
-          {info.skills.exposedTo.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
+        {categories.map((category) => (
+          <div>
+            <p style={{ color: info.baseColor }}>{category}</p>
+            <ul className={Style.skills}>
+              {info.skills[category].map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </>
     );
   }

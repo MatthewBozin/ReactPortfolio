@@ -1,10 +1,10 @@
-import self from "../img/self.png";
-import mock1 from "../img/FoodOasis.png";
-import mock2 from "../img/together.png";
-import mock3 from "../img/SRDcat.png";
+import self from "../img/self.jpg";
+import mock1 from "../img/FoodOasis.jpg";
+import mock2 from "../img/together.jpg";
+import mock3 from "../img/SRDcat.jpg";
 import mock4 from "../img/caesura.jpg";
-import mock5 from "../img/ARCdoom.png";
-import mock6 from "../img/UVGDRS.png";
+import mock5 from "../img/ARCdoom.jpg";
+import mock6 from "../img/UVGDRS.jpg";
 
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
 how to make this template work best for you! */
